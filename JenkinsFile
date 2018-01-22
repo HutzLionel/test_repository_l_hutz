@@ -1,9 +1,11 @@
 pipeline {
-    agent { docker 'ruby' }
+    agent any
     stages {
-        stage('build') {
+        stage('TEST') {
             steps {
-                sh 'ruby --version'
+                bat "./test_stage_step_a.bat"
+                bat "./test_stage_step_b.bat"
+                bat "./test_stage_step_c.bat"
             }
         }
     }

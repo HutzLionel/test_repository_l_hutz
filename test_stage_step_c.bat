@@ -1,0 +1,1 @@
+cmd /k jruby -S test_stage_step_c.rb
